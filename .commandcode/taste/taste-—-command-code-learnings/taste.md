@@ -1,0 +1,15 @@
+# Taste — Command Code Learnings
+- Prefers permanent, system-wide fixes over per-project or one-off workarounds (e.g., wanted a global IPv6 fix so `npm init playwright@latest` installs browsers cleanly in any new folder, rather than patching each folder). Confidence: 0.9
+- Works as a QA engineer lead; domain includes database integration testing that validates column-level data propagation across a chain of applications. Confidence: 0.85
+- Uses Playwright for browser/end-to-end test automation and scaffolds new projects with `npm init playwright@latest`. Confidence: 0.8
+- Works in a Windows + Java environment (Java test framework alongside npm/Playwright tooling). Confidence: 0.7
+- Also uses Python on Windows (in addition to Java). Confidence: 0.6
+- Wants to understand the source/origin of things — the root cause of a problem, or where configuration values come from — not just receive the fix or the answer. Confidence: 0.7
+- Stores environment configuration (API keys, base URLs, model names) in a `.env` file at the project root rather than hardcoding values. Confidence: 0.7
+- Cares about the exact location where files are created and wants them placed in the directory they indicate ("add only here"), correcting the assistant when it writes to a different/assumed location. Confidence: 0.6
+- Uses Command Code with the built-in DeepSeek v4 Pro (latest) model, not a BYOK/custom provider. Confidence: 0.6
+- Writes their own Python scripts that call LLMs via the OpenAI Python SDK (`openai` package), reading config with `os.getenv` from a `.env` file (e.g., `client.chat.completions.create(model=os.getenv("MODEL"))`). Confidence: 0.7
+- Uses Python virtual environments (`.venv`) for Python projects on Windows. Confidence: 0.6
+- Prefers DeepSeek's own API for their own LLM-calling scripts (chose DeepSeek over local Ollama or OpenAI when asked which provider to use), though later switched to local Ollama (Qwen) after DeepSeek returned an insufficient-balance error. Confidence: 0.5
+- Uses local Ollama models (e.g., Qwen) for their LLM-calling scripts, pointing the OpenAI SDK at Ollama's OpenAI-compatible endpoint (`http://localhost:11434/v1`) with a dummy `API_KEY` value. Confidence: 0.6
+- When running local models on CPU (no GPU), prioritizes speed/response latency over model size/quality — chose `qwen3.5:2b` ("fast, decent quality") over the assistant's suggested `qwen3.5:4b`. Confidence: 0.4
