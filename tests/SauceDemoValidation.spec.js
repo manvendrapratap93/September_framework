@@ -9,7 +9,7 @@ for(const username of Logintestdata.users.usernames){
   })
 }
 for(const username of Logintestdata.users.usernames){
-test.only(`validate add to cart sauce demo test-${username}`,async({page,lp,prp,cart,co,cop,cp})=>{
+test(`validate add to cart sauce demo test-${username}`,async({page,lp,prp,cart,co,cop,cp})=>{
      await lp.doLogin(username)
      await expect(page).toHaveURL("/inventory.html")
      await prp.addToCart();
