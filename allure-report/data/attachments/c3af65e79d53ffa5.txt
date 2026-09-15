@@ -1,0 +1,20 @@
+[
+  'Sauce Labs Backpack',
+  'Sauce Labs Bike Light',
+  'Sauce Labs Bolt T-Shirt',
+  'Sauce Labs Fleece Jacket',
+  'Sauce Labs Onesie',
+  'Test.allTheThings() T-Shirt (Red)'
+]
+[
+  'Payment Information:\n' +
+    'SauceCard #31337\n' +
+    'Shipping Information:\n' +
+    'Free Pony Express Delivery!\n' +
+    'Price Total\n' +
+    'Item total: $129.94\n' +
+    'Tax: $10.40\n' +
+    'Total: $140.34\n' +
+    'Cancel\n' +
+    'Finish'
+]
